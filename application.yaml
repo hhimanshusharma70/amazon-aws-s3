@@ -1,0 +1,58 @@
+# Logging settings.
+logging:
+
+ # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
+ level: DEBUG
+
+ appenders:
+   - type: console
+     threshold: DEBUG
+     target: stderr
+   - type: file
+     threshold: DEBUG
+     logFormat: "%-6level [%d{HH:mm:ss.SSS}] [%t] %logger{5} - %X{code} %msg %n"
+     currentLogFilename: target/application.log
+     archive: true
+     archivedLogFilenamePattern: target/application-%d{yyyy-MM-dd}.log.gz
+     archivedFileCount: 7
+     timeZone: UTC
+
+
+# Server setting
+server:
+  applicationContextPath: /
+  adminConnectors:
+    - type: http
+      port: 8076
+  applicationConnectors:
+    - type: http
+      port: 8074
+      # HTTPS Config----
+ #  - type: https
+ #    port: 8443
+ #    keyStorePath: /root/wedoshoes_certificate/truststore.jks
+ #    keyStorePassword: "craterzone"
+ #    keyStoreType: jks
+ #    validateCerts: false
+ #    validatePeers: false
+
+
+      bindHost: 0.0.0.0 # only bind to loopback
+      headerCacheSize: 512 bytes
+      outputBufferSize: 32KiB
+      maxRequestHeaderSize: 8KiB
+      maxResponseHeaderSize: 8KiB
+      inputBufferSize: 8KiB
+      idleTimeout: 30 seconds
+      minBufferPoolSize: 64 bytes
+      bufferPoolIncrement: 1KiB
+      maxBufferPoolSize: 64KiB
+      acceptorThreads: 1
+      selectorThreads: 2
+      acceptQueueSize: 1024
+      reuseAddress: true
+      soLingerTime: 345s
+      useServerHeader: false
+      useDateHeader: true
+      useForwardedHeaders: true
+  

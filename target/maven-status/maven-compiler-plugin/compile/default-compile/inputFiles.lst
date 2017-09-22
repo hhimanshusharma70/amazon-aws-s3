@@ -1,0 +1,12 @@
+/home/vaishali/wedoshoes_projects/ammazon-aws-wedotest/src/main/java/com/crater/ammazonawstest/service/impl/ProductServiceImpl.java
+/home/vaishali/wedoshoes_projects/ammazon-aws-wedotest/src/main/java/com/crater/ammazonawstest/manager/ListBucketsApp.java
+/home/vaishali/wedoshoes_projects/ammazon-aws-wedotest/src/main/java/com/crater/ammazonawstest/resource/impl/ProductResourceImpl.java
+/home/vaishali/wedoshoes_projects/ammazon-aws-wedotest/src/main/java/com/crater/ammazonawstest/application/CoreApplication.java
+/home/vaishali/wedoshoes_projects/ammazon-aws-wedotest/src/main/java/com/crater/ammazonawstest/service/impl/AwsHelper.java
+/home/vaishali/wedoshoes_projects/ammazon-aws-wedotest/src/main/java/com/crater/ammazonawstest/model/Signature.java
+/home/vaishali/wedoshoes_projects/ammazon-aws-wedotest/src/main/java/com/crater/ammazonawstest/manager/AwsClientFactory.java
+/home/vaishali/wedoshoes_projects/ammazon-aws-wedotest/src/main/java/com/crater/ammazonawstest/model/ProductBucketDetails.java
+/home/vaishali/wedoshoes_projects/ammazon-aws-wedotest/src/main/java/com/crater/ammazonawstest/service/ProductService.java
+/home/vaishali/wedoshoes_projects/ammazon-aws-wedotest/src/main/java/com/crater/ammazonawstest/application/CoreServiceConfiguration.java
+/home/vaishali/wedoshoes_projects/ammazon-aws-wedotest/src/main/java/com/crater/ammazonawstest/model/AwsSignatureV4Utils.java
+/home/vaishali/wedoshoes_projects/ammazon-aws-wedotest/src/main/java/com/crater/ammazonawstest/resource/ProductResource.java

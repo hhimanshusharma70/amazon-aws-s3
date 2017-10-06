@@ -10,7 +10,10 @@ import java.security.PublicKey;
 import java.security.SecureRandom;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
+import java.sql.Date;
 import java.time.Instant;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
@@ -19,14 +22,28 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
+import com.amazonaws.AmazonClientException;
+import com.amazonaws.AmazonServiceException;
+import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.AmazonS3EncryptionClient;
+import com.amazonaws.services.s3.Headers;
+import com.amazonaws.services.s3.model.AbortMultipartUploadRequest;
 import com.amazonaws.services.s3.model.AmazonS3Exception;
 import com.amazonaws.services.s3.model.BucketLifecycleConfiguration;
+import com.amazonaws.services.s3.model.BucketReplicationConfiguration;
 import com.amazonaws.services.s3.model.EncryptionMaterials;
 import com.amazonaws.services.s3.model.GetObjectMetadataRequest;
+import com.amazonaws.services.s3.model.InitiateMultipartUploadRequest;
+import com.amazonaws.services.s3.model.InitiateMultipartUploadResult;
+import com.amazonaws.services.s3.model.ListMultipartUploadsRequest;
+import com.amazonaws.services.s3.model.MultipartUploadListing;
 import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.PutObjectRequest;
+import com.amazonaws.services.s3.model.ReplicationDestinationConfig;
+import com.amazonaws.services.s3.model.ReplicationRule;
+import com.amazonaws.services.s3.model.ReplicationRuleStatus;
 import com.amazonaws.services.s3.model.RestoreObjectRequest;
 import com.amazonaws.services.s3.model.S3Object;
 import com.amazonaws.services.s3.model.SSECustomerKey;
@@ -35,9 +52,12 @@ import com.amazonaws.services.s3.model.StorageClass;
 import com.amazonaws.services.s3.model.Tag;
 import com.amazonaws.services.s3.model.lifecycle.LifecycleFilter;
 import com.amazonaws.services.s3.model.lifecycle.LifecycleTagPredicate;
+import com.amazonaws.services.s3.transfer.TransferManager;
+import com.amazonaws.services.s3.transfer.Upload;
 import com.crater.ammazonawstest.manager.AwsClientFactory;
 import com.crater.ammazonawstest.model.Bucket;
 import com.crater.ammazonawstest.model.ProductBucketDetails;
+import com.crater.ammazonawstest.model.ReplicationConfig;
 import com.crater.ammazonawstest.model.Signature;
 import com.crater.ammazonawstest.service.ProductService;
 
@@ -208,7 +228,7 @@ public class ProductServiceImpl  implements ProductService {
 
 	@Override
 	public Object getObjectWithEncrytion(String bucketName,
-			 String path,SSECustomerKey encyptionKey) {
+			 String path) {
 		AmazonS3 amazonS3 = null;
 		S3Object object = null;
 		try {
@@ -248,4 +268,98 @@ public class ProductServiceImpl  implements ProductService {
 		}
 		return null;
 	}
+
+	@Override
+	public void multipartUpload(Bucket bucket) throws InterruptedException {
+		 TransferManager tm = null;
+		try {
+			tm = new TransferManager(AwsClientFactory.getAwsCredentialsProvider());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}        
+		 File file = new File(bucket.getFileName());
+	        Upload upload = tm.upload(
+	        		bucket.getBucketName(), bucket.getKey(), file);
+	        	upload.waitForCompletion();
+	        	System.out.println("Upload complete.");
+	    }
+
+	@Override
+	public void abortMultipartUpload(Bucket bucket) throws IOException {
+		// This will delete how many days before to delete 
+		TransferManager tm = new TransferManager(new ProfileCredentialsProvider());        
+
+        int sevenDays = 1000 * 60 * 60 * 24 * 7;
+		Date oneWeekAgo = new Date(System.currentTimeMillis() - sevenDays);
+        
+        try {
+        	tm.abortMultipartUploads(bucket.getBucketName(), oneWeekAgo);
+        } catch (AmazonClientException amazonClientException) {
+        	System.out.println("Unable to upload file, upload was aborted.");
+        	amazonClientException.printStackTrace();
+        }
+        
+        // This will delete based on upload Id
+        AmazonS3 s3Client = new AmazonS3Client(AwsClientFactory.getAwsCredentialsProvider()); 
+        InitiateMultipartUploadRequest initRequest =
+        	    new InitiateMultipartUploadRequest(bucket.getBucketName(), bucket.getKey());
+        	InitiateMultipartUploadResult initResponse = 
+        	               s3Client.initiateMultipartUpload(initRequest);
+
+        	
+        	s3Client.abortMultipartUpload(new AbortMultipartUploadRequest(
+        	            bucket.getBucketName()
+        	            , bucket.getKey(), initResponse.getUploadId()));
+        	
+       //This will list all mutli part upload 
+        	ListMultipartUploadsRequest allMultpartUploadsRequest = 
+        		     new ListMultipartUploadsRequest(bucket.getBucketName());
+        		MultipartUploadListing multipartUploadListing = 
+        		     s3Client.listMultipartUploads(allMultpartUploadsRequest); 	
+        		System.out.println(multipartUploadListing.getBucketName());
+       
+	}
+
+	@Override
+	public void addCrossRegionReplicate(ReplicationConfig replicationConfig) {
+		String sourceBucketName = replicationConfig.getSourceBucketName(); 
+	    String roleARN = "arn:aws:iam::"+replicationConfig.getAccountId()+":role/"+replicationConfig.getRoleName(); 
+	    String destinationBucketArn = "arn:aws:s3:::"+replicationConfig.getDestinationBucketName(); 
+		 AmazonS3 s3Client = new AmazonS3Client(new ProfileCredentialsProvider());
+	        try {
+	            Map<String, ReplicationRule> replicationRules = new HashMap<String, ReplicationRule>();
+	            replicationRules.put(
+	                    "a-sample-rule-id",
+	                    new ReplicationRule()
+	                        .withPrefix("Tax/")
+	                        .withStatus(ReplicationRuleStatus.Enabled)
+	                        .withDestinationConfig(
+	                                new ReplicationDestinationConfig()
+	                                  .withBucketARN(destinationBucketArn)
+	                                  .withStorageClass(StorageClass.Standard)
+	                        )
+	            );
+	            s3Client.setBucketReplicationConfiguration(
+	                    sourceBucketName,
+	                    new BucketReplicationConfiguration()
+	                        .withRoleARN(roleARN)
+	                        .withRules(replicationRules)
+	            ); 
+	            BucketReplicationConfiguration replicationConfiguration = s3Client.getBucketReplicationConfiguration(sourceBucketName);
+	            
+	            ReplicationRule rule = replicationConfiguration.getRule("a-sample-rule-id");
+	            
+	            // FOR replicatin Status 
+	            GetObjectMetadataRequest metadataRequest = new GetObjectMetadataRequest(replicationConfig.getSourceBucketName(), replicationConfig.getDestinationBucketName());
+	            metadataRequest.setKey(replicationConfig.getKey());
+	            ObjectMetadata metadata = s3Client.getObjectMetadata(metadataRequest);
+
+	            System.out.println("Replication Status : " + metadata.getRawMetadataValue(Headers.OBJECT_REPLICATION_STATUS));
+	        } catch (AmazonServiceException ase) {
+	           ase.printStackTrace();
+	        } catch (AmazonClientException ace) {
+	           ace.printStackTrace();
+	        }
+	    }
+		
 }

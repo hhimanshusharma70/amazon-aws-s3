@@ -10,9 +10,9 @@ import javax.ws.rs.core.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.amazonaws.services.s3.model.SSECustomerKey;
 import com.crater.ammazonawstest.model.Bucket;
 import com.crater.ammazonawstest.model.ProductBucketDetails;
+import com.crater.ammazonawstest.model.ReplicationConfig;
 import com.crater.ammazonawstest.model.Signature;
 import com.crater.ammazonawstest.resource.ProductResource;
 import com.crater.ammazonawstest.service.ProductService;
@@ -91,9 +91,29 @@ public class ProductResourceImpl implements ProductResource {
 	}
 
 	@Override
-	public Response getObjectWithEncrytion(String bucketName,
-			 String path,SSECustomerKey encyptionKey) {
-		return Response.ok(productService.getObjectWithEncrytion(bucketName,path,encyptionKey)).build();
+	public Response getObjectWithDecrytion(String bucketName,
+			 String path) {
+		return Response.ok(productService.getObjectWithEncrytion(bucketName,path)).build();
+	}
+
+	@Override
+	public Response multipartUpload(Bucket bucket) throws InterruptedException {
+		productService.multipartUpload(bucket);
+		return Response.noContent().build();
+	}
+
+	@Override
+	public Response abortMultipartUpload(Bucket bucket)
+			throws InterruptedException, IOException {
+		productService.abortMultipartUpload(bucket);
+		return Response.noContent().build();
+	}
+
+	@Override
+	public Response addCrossRegionReplicate(ReplicationConfig replicationConfig)
+			throws InterruptedException, IOException {
+		productService.addCrossRegionReplicate(replicationConfig);
+		return Response.noContent().build();
 	}
 
 }

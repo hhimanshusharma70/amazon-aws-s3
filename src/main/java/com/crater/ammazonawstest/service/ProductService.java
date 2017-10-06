@@ -8,6 +8,7 @@ import java.security.NoSuchAlgorithmException;
 import com.amazonaws.services.s3.model.SSECustomerKey;
 import com.crater.ammazonawstest.model.Bucket;
 import com.crater.ammazonawstest.model.ProductBucketDetails;
+import com.crater.ammazonawstest.model.ReplicationConfig;
 import com.crater.ammazonawstest.model.Signature;
 
 public interface ProductService {
@@ -34,7 +35,12 @@ public interface ProductService {
 
 	Object uploadWithEncryption(Bucket bucket);
 
-	Object getObjectWithEncrytion(String bucketName, String path,
-			SSECustomerKey encyptionKey);
+	Object getObjectWithEncrytion(String bucketName, String path);
+
+	void multipartUpload(Bucket bucket) throws InterruptedException;
+
+	void abortMultipartUpload(Bucket bucket) throws IOException;
+
+	void addCrossRegionReplicate(ReplicationConfig replicationConfig);
 
 }

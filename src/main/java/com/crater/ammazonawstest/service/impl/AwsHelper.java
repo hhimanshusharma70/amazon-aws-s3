@@ -29,7 +29,7 @@ public class AwsHelper {
 
 	public static String createBucket() throws IOException {
 		AmazonS3 s3 = AwsClientFactory.createClient();
-		Region usWest2 = Region.getRegion(Regions.US_WEST_2);
+		Region usWest2 = Region.getRegion(Regions.AP_SOUTH_1);
 		s3.setRegion(usWest2);
 		String bucketName = "wedoshoesproduct" + UUID.randomUUID();
 		bname = bucketName;
@@ -56,14 +56,16 @@ public class AwsHelper {
 
 	public static Object getProductDetails(String bucketName,
 			String path) {
-		AmazonS3 s3 = null;
+		AWSCredentials credentials = null;
 		try {
-			s3 = AwsClientFactory.createClient();
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			credentials = new ProfileCredentialsProvider().getCredentials();
+		} catch (Exception e) {
+			throw new AmazonClientException(
+					"Cannot load the credentials from the credential profiles file. ",
+					e);
 		}
-		Region usWest2 = Region.getRegion(Regions.US_WEST_2);
+		AmazonS3 s3 = new AmazonS3Client();
+		Region usWest2 = Region.getRegion(Regions.AP_SOUTH_1);
 		s3.setRegion(usWest2);
 		S3Object object = s3.getObject(new GetObjectRequest(bucketName, path));
 		
@@ -88,7 +90,7 @@ public class AwsHelper {
 					e);
 		}
 		AmazonS3 s3 = new AmazonS3Client();
-		Region usWest2 = Region.getRegion(Regions.US_WEST_2);
+		Region usWest2 = Region.getRegion(Regions.AP_SOUTH_1);
 		s3.setRegion(usWest2);
 		ObjectListing objectListing = s3.listObjects(new ListObjectsRequest()
 				.withBucketName(bucketName)

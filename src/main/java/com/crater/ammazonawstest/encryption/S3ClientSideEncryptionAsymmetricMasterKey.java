@@ -57,7 +57,8 @@ public class S3ClientSideEncryptionAsymmetricMasterKey {
         // 2. Construct an instance of AmazonS3EncryptionClient.
         EncryptionMaterials encryptionMaterials = new EncryptionMaterials(
                 loadedKeyPair);
-        AmazonS3EncryptionClient encryptionClient = new AmazonS3EncryptionClient(
+        @SuppressWarnings("deprecation")
+		AmazonS3EncryptionClient encryptionClient = new AmazonS3EncryptionClient(
                 new ProfileCredentialsProvider(),
                 new StaticEncryptionMaterialsProvider(encryptionMaterials));
         // Create the bucket

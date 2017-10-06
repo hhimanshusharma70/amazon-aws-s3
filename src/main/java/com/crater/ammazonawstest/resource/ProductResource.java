@@ -17,9 +17,9 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.amazonaws.services.s3.model.SSECustomerKey;
 import com.crater.ammazonawstest.model.Bucket;
 import com.crater.ammazonawstest.model.ProductBucketDetails;
+import com.crater.ammazonawstest.model.ReplicationConfig;
 import com.crater.ammazonawstest.model.Signature;
 
 @Path("/api/v1/products")
@@ -50,15 +50,19 @@ public interface ProductResource {
 	Response listBucketDetails(@PathParam("bucket_name") String bucketName,
 			@QueryParam("prefix") String prefix);
 	
+	
+	//Not working createSignature and not needed  
 	@POST
 	@Path("/signature")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	Response  createSignature( Signature signature) throws InvalidKeyException, NoSuchAlgorithmException, IllegalStateException, UnsupportedEncodingException;
 	
+	
 	/**
 	 * BUCKET LIFECYCLE RELATED METHODS
 	 */
+	
 	
 	@POST 
 	@Path("{bucket_name}/lifecycle")
@@ -81,14 +85,18 @@ public interface ProductResource {
 	/**
 	 * RESTORING OBJECT FROM GLACIER 
 	 */
+	
 	@POST
 	@Path("/restore")
 	@Produces(MediaType.APPLICATION_JSON)
 	Response restoreBucket(Bucket bucket);
 	
+	
+	
 	/**
 	 * Encryption and Decryption  on Objects
 	 */
+	
 	@POST
 	@Path("/upload/")
 	@Produces(MediaType.APPLICATION_JSON)
@@ -97,9 +105,32 @@ public interface ProductResource {
 	@GET
 	@Path("/retreive")
 	@Produces(MediaType.APPLICATION_JSON)
-	Response getObjectWithEncrytion(@QueryParam("bucket_name") String bucketName,
-			@QueryParam("key") String path,@QueryParam("encrytion_key")  SSECustomerKey encyptionKey);
+	Response getObjectWithDecrytion(@QueryParam("bucket_name") String bucketName,
+			@QueryParam("key") String path);
 	
+	/**
+	 * Multipart Upload Case 
+	 * @throws InterruptedException 
+	 */
+	
+	@POST
+	@Path("/multipart-upload")
+	@Produces(MediaType.APPLICATION_JSON)
+	Response multipartUpload(Bucket bucket) throws InterruptedException;
+	
+	@POST
+	@Path("/abort/multipart-upload")
+	@Produces(MediaType.APPLICATION_JSON)
+	Response abortMultipartUpload(Bucket bucket) throws InterruptedException, IOException;
+	
+	/**
+	 * Cross Region Replication 
+	 */
+	
+	@POST
+	@Path("/cross/replicate")
+	@Produces(MediaType.APPLICATION_JSON)
+	Response addCrossRegionReplicate(ReplicationConfig replicationConfig) throws InterruptedException, IOException;
 	
 	
 }

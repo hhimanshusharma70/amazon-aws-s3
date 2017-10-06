@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
 import com.crater.ammazonawstest.model.Bucket;
 import com.crater.ammazonawstest.model.ProductBucketDetails;
 import com.crater.ammazonawstest.model.ReplicationConfig;
-import com.crater.ammazonawstest.model.Signature;
 import com.crater.ammazonawstest.resource.ProductResource;
 import com.crater.ammazonawstest.service.ProductService;
 
@@ -42,23 +41,19 @@ public class ProductResourceImpl implements ProductResource {
 	
 
 	@Override
-	public Response getProductDetails(java.lang.String bucketName,
-			java.lang.String path) {
+	public Response getProductDetails(final String bucketName,
+			final String path) {
 		return Response.ok(productService.getProductDetails(bucketName,path)).build();
 
 	}
 
 	@Override
-	public Response listBucketDetails(java.lang.String bucketName,
-			java.lang.String prefix) {
+	public Response listBucketDetails(final String bucketName,
+			final String prefix) {
 		return Response.ok(productService.listBucketDetails(bucketName,prefix)).build();
 
 	}
 
-	@Override
-	public Response createSignature(Signature signature) throws InvalidKeyException, NoSuchAlgorithmException, IllegalStateException, UnsupportedEncodingException {
-        return Response.ok(productService.createSignature(signature).toString()).build();
-	}
 
 	@Override
 	public Response createLifeBucketCycle(final String bucketName,final Integer standardInfrequentAccessTime,
@@ -70,12 +65,12 @@ public class ProductResourceImpl implements ProductResource {
 	}
 
 	@Override
-	public Response getBucketLifeCycle(String bucketName) {
+	public Response getBucketLifeCycle(final String bucketName) {
 		return Response.ok(productService.getBucketLifeCycle(bucketName)).build();
 	}
 
 	@Override
-	public Response removeBucketLifeCycle(String bucketName) {
+	public Response removeBucketLifeCycle(final String bucketName) {
 		productService.removeBucketLifeCycle(bucketName);
 		return Response.noContent().build();
 	}
@@ -86,33 +81,45 @@ public class ProductResourceImpl implements ProductResource {
 	}
 
 	@Override
-	public Response uploadWithEncrytion(Bucket bucket) {
+	public Response uploadWithEncrytion(final Bucket bucket) {
 		return Response.ok(productService.uploadWithEncryption(bucket)).build();
 	}
 
 	@Override
-	public Response getObjectWithDecrytion(String bucketName,
+	public Response getObjectWithDecrytion(final String bucketName,
 			 String path) {
 		return Response.ok(productService.getObjectWithEncrytion(bucketName,path)).build();
 	}
 
 	@Override
-	public Response multipartUpload(Bucket bucket) throws InterruptedException {
+	public Response multipartUpload(final Bucket bucket) throws InterruptedException {
 		productService.multipartUpload(bucket);
 		return Response.noContent().build();
 	}
 
 	@Override
-	public Response abortMultipartUpload(Bucket bucket)
+	public Response abortMultipartUpload(final Bucket bucket)
 			throws InterruptedException, IOException {
 		productService.abortMultipartUpload(bucket);
 		return Response.noContent().build();
 	}
 
 	@Override
-	public Response addCrossRegionReplicate(ReplicationConfig replicationConfig)
+	public Response addCrossRegionReplicate(final ReplicationConfig replicationConfig)
 			throws InterruptedException, IOException {
 		productService.addCrossRegionReplicate(replicationConfig);
+		return Response.noContent().build();
+	}
+
+	@Override
+	public Response deleteBucket(final String bucketName) {
+		productService.removeBucket(bucketName);
+		return Response.noContent().build();
+	}
+
+	@Override
+	public Response emptyBucket(final String bucketName) {
+		productService.emptyBucket(bucketName);
 		return Response.noContent().build();
 	}
 

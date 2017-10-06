@@ -20,7 +20,6 @@ import javax.ws.rs.core.Response;
 import com.crater.ammazonawstest.model.Bucket;
 import com.crater.ammazonawstest.model.ProductBucketDetails;
 import com.crater.ammazonawstest.model.ReplicationConfig;
-import com.crater.ammazonawstest.model.Signature;
 
 @Path("/api/v1/products")
 public interface ProductResource {
@@ -50,13 +49,19 @@ public interface ProductResource {
 	Response listBucketDetails(@PathParam("bucket_name") String bucketName,
 			@QueryParam("prefix") String prefix);
 	
+	/**
+	 * Delete and Empty Bucket
+	 */
 	
-	//Not working createSignature and not needed  
-	@POST
-	@Path("/signature")
-	@Consumes(MediaType.APPLICATION_JSON)
+	@DELETE
+	@Path("{bucket_name}")
 	@Produces(MediaType.APPLICATION_JSON)
-	Response  createSignature( Signature signature) throws InvalidKeyException, NoSuchAlgorithmException, IllegalStateException, UnsupportedEncodingException;
+	Response deleteBucket(@PathParam("bucket_name") String bucketName);
+	
+	@DELETE
+	@Path("{bucket_name}/empty")
+	@Produces(MediaType.APPLICATION_JSON)
+	Response emptyBucket(@PathParam("bucket_name") String bucketName);
 	
 	
 	/**

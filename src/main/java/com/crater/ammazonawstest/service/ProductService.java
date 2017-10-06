@@ -1,15 +1,10 @@
 package com.crater.ammazonawstest.service;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
 
-import com.amazonaws.services.s3.model.SSECustomerKey;
 import com.crater.ammazonawstest.model.Bucket;
 import com.crater.ammazonawstest.model.ProductBucketDetails;
 import com.crater.ammazonawstest.model.ReplicationConfig;
-import com.crater.ammazonawstest.model.Signature;
 
 public interface ProductService {
 
@@ -20,8 +15,6 @@ public interface ProductService {
 	Object getProductDetails(String bucketName, String path);
 
 	Object listBucketDetails(String bucketName, String prefix);
-
-	String createSignature(Signature signature) throws InvalidKeyException, NoSuchAlgorithmException, IllegalStateException, UnsupportedEncodingException;
 
 
 	void createLifeBucketCycle(String bucketName,Integer standardInfrequentAccessTime, Integer glacierAccessTime,
@@ -42,5 +35,9 @@ public interface ProductService {
 	void abortMultipartUpload(Bucket bucket) throws IOException;
 
 	void addCrossRegionReplicate(ReplicationConfig replicationConfig);
+
+	void removeBucket(String bucketName);
+
+	void emptyBucket(String bucketName);
 
 }

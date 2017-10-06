@@ -13,6 +13,7 @@ import java.security.spec.X509EncodedKeySpec;
 import java.sql.Date;
 import java.time.Instant;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 import javax.crypto.KeyGenerator;
@@ -38,7 +39,9 @@ import com.amazonaws.services.s3.model.GetObjectMetadataRequest;
 import com.amazonaws.services.s3.model.InitiateMultipartUploadRequest;
 import com.amazonaws.services.s3.model.InitiateMultipartUploadResult;
 import com.amazonaws.services.s3.model.ListMultipartUploadsRequest;
+import com.amazonaws.services.s3.model.ListVersionsRequest;
 import com.amazonaws.services.s3.model.MultipartUploadListing;
+import com.amazonaws.services.s3.model.ObjectListing;
 import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.PutObjectRequest;
 import com.amazonaws.services.s3.model.ReplicationDestinationConfig;
@@ -46,10 +49,12 @@ import com.amazonaws.services.s3.model.ReplicationRule;
 import com.amazonaws.services.s3.model.ReplicationRuleStatus;
 import com.amazonaws.services.s3.model.RestoreObjectRequest;
 import com.amazonaws.services.s3.model.S3Object;
-import com.amazonaws.services.s3.model.SSECustomerKey;
+import com.amazonaws.services.s3.model.S3ObjectSummary;
+import com.amazonaws.services.s3.model.S3VersionSummary;
 import com.amazonaws.services.s3.model.StaticEncryptionMaterialsProvider;
 import com.amazonaws.services.s3.model.StorageClass;
 import com.amazonaws.services.s3.model.Tag;
+import com.amazonaws.services.s3.model.VersionListing;
 import com.amazonaws.services.s3.model.lifecycle.LifecycleFilter;
 import com.amazonaws.services.s3.model.lifecycle.LifecycleTagPredicate;
 import com.amazonaws.services.s3.transfer.TransferManager;
@@ -58,7 +63,6 @@ import com.crater.ammazonawstest.manager.AwsClientFactory;
 import com.crater.ammazonawstest.model.Bucket;
 import com.crater.ammazonawstest.model.ProductBucketDetails;
 import com.crater.ammazonawstest.model.ReplicationConfig;
-import com.crater.ammazonawstest.model.Signature;
 import com.crater.ammazonawstest.service.ProductService;
 
 
@@ -81,42 +85,16 @@ public class ProductServiceImpl  implements ProductService {
     }
 
 	@Override
-	public Object getProductDetails(String bucketName,
-			String path) {
+	public Object getProductDetails(final String bucketName,
+			final String path) {
 		return AwsHelper.getProductDetails(bucketName,path);
 	}
 
 	@Override
-	public Object listBucketDetails(String bucketName, String prefix) {
+	public Object listBucketDetails(final String bucketName,final String prefix) {
 		return AwsHelper.listBucketDetails(bucketName,prefix);
 	}
 
-	@Override
-	public String createSignature(Signature signature) {
-		/*try {
-		byte[] kSecret = ("AWS4" + signature.getKey()).getBytes("UTF8");
-	    byte[] kDate;
-			kDate = HmacSHA256(signature.getDateStamp(), kSecret);
-	    byte[] kRegion = HmacSHA256(signature.getRegionName(), kDate);
-	    byte[] kService = HmacSHA256(signature.getServiceName(), kRegion);
-	    byte[] kSigning = HmacSHA256("aws4_request", kService);
-	    return Hex.encodeToString(kSigning);
-	    
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	   return null;
-	}
-	
-
-	
-	static byte[] HmacSHA256(String data, byte[] key) throws Exception {
-	    String algorithm="HmacSHA256";
-	    Mac mac = Mac.getInstance(algorithm);
-	    mac.init(new SecretKeySpec(key, algorithm));
-	    return mac.doFinal(data.getBytes("UTF8"));*/
-		return null;
-	}
 
 	@Override
 	public void createLifeBucketCycle(final String bucketName,final Integer standardInfrequentAccessTime,
@@ -150,7 +128,7 @@ public class ProductServiceImpl  implements ProductService {
 	}
 
 	@Override
-	public Object getBucketLifeCycle(String bucketName) {
+	public Object getBucketLifeCycle(final String bucketName) {
 		AmazonS3 amazonS3 = null;
 		try {
 			amazonS3 = AwsClientFactory.createClient();
@@ -161,7 +139,7 @@ public class ProductServiceImpl  implements ProductService {
 	}
 
 	@Override
-	public void removeBucketLifeCycle(String bucketName) {
+	public void removeBucketLifeCycle(final String bucketName) {
 		AmazonS3 amazonS3 = null;
 		try {
 			amazonS3 = AwsClientFactory.createClient();
@@ -172,7 +150,7 @@ public class ProductServiceImpl  implements ProductService {
 	}
 
 	@Override
-	public String restoreBucket(Bucket bucket) {
+	public String restoreBucket(final Bucket bucket) {
 		AmazonS3 amazonS3 = null;
 		try {
 			amazonS3 = AwsClientFactory.createClient();
@@ -194,7 +172,7 @@ public class ProductServiceImpl  implements ProductService {
 	}
 
 	@Override
-	public Object uploadWithEncryption(Bucket bucket) {
+	public Object uploadWithEncryption(final Bucket bucket) {
 		try {
 			 File file = new File(bucket.getFileName());
 	            EncryptionMaterials encryptionMaterials = new EncryptionMaterials(
@@ -227,8 +205,8 @@ public class ProductServiceImpl  implements ProductService {
 }
 
 	@Override
-	public Object getObjectWithEncrytion(String bucketName,
-			 String path) {
+	public Object getObjectWithEncrytion(final String bucketName,
+			 final String path) {
 		AmazonS3 amazonS3 = null;
 		S3Object object = null;
 		try {
@@ -270,7 +248,7 @@ public class ProductServiceImpl  implements ProductService {
 	}
 
 	@Override
-	public void multipartUpload(Bucket bucket) throws InterruptedException {
+	public void multipartUpload(final Bucket bucket) throws InterruptedException {
 		 TransferManager tm = null;
 		try {
 			tm = new TransferManager(AwsClientFactory.getAwsCredentialsProvider());
@@ -285,7 +263,7 @@ public class ProductServiceImpl  implements ProductService {
 	    }
 
 	@Override
-	public void abortMultipartUpload(Bucket bucket) throws IOException {
+	public void abortMultipartUpload(final Bucket bucket) throws IOException {
 		// This will delete how many days before to delete 
 		TransferManager tm = new TransferManager(new ProfileCredentialsProvider());        
 
@@ -321,7 +299,7 @@ public class ProductServiceImpl  implements ProductService {
 	}
 
 	@Override
-	public void addCrossRegionReplicate(ReplicationConfig replicationConfig) {
+	public void addCrossRegionReplicate(final ReplicationConfig replicationConfig) {
 		String sourceBucketName = replicationConfig.getSourceBucketName(); 
 	    String roleARN = "arn:aws:iam::"+replicationConfig.getAccountId()+":role/"+replicationConfig.getRoleName(); 
 	    String destinationBucketArn = "arn:aws:s3:::"+replicationConfig.getDestinationBucketName(); 
@@ -346,9 +324,7 @@ public class ProductServiceImpl  implements ProductService {
 	                        .withRules(replicationRules)
 	            ); 
 	            BucketReplicationConfiguration replicationConfiguration = s3Client.getBucketReplicationConfiguration(sourceBucketName);
-	            
 	            ReplicationRule rule = replicationConfiguration.getRule("a-sample-rule-id");
-	            
 	            // FOR replicatin Status 
 	            GetObjectMetadataRequest metadataRequest = new GetObjectMetadataRequest(replicationConfig.getSourceBucketName(), replicationConfig.getDestinationBucketName());
 	            metadataRequest.setKey(replicationConfig.getKey());
@@ -361,5 +337,74 @@ public class ProductServiceImpl  implements ProductService {
 	           ace.printStackTrace();
 	        }
 	    }
+
+	@Override
+	public void removeBucket(final String bucketName) {
+		AmazonS3 s3 = null;
+		try {
+			s3 = AwsClientFactory.createClient();
+			removeObjects(s3,bucketName);
+			removeVersions(s3,bucketName);
+			s3.deleteBucket(bucketName);
+		} catch (AmazonServiceException e) {
+			System.err.println(e.getErrorMessage());
+			System.exit(1);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+	private void removeVersions(final AmazonS3 s3,final String bucketName) {
+		VersionListing version_listing = s3
+				.listVersions(new ListVersionsRequest()
+						.withBucketName(bucketName));
+		while (true) {
+			for (Iterator<?> iterator = version_listing
+					.getVersionSummaries().iterator(); iterator.hasNext();) {
+				S3VersionSummary vs = (S3VersionSummary) iterator.next();
+				s3.deleteVersion(
+				bucketName, vs.getKey(), vs.getVersionId());
+			}
+			if (version_listing.isTruncated()) {
+				version_listing = s3
+						.listNextBatchOfVersions(version_listing);
+			} else {
+				break;
+			}
+		}
+	}
+
+	private void removeObjects(final AmazonS3 s3, final String bucketName) {
+		ObjectListing object_listing = s3.listObjects(bucketName);
+		while (true) {
+			for (Iterator<?> iterator = object_listing.getObjectSummaries()
+					.iterator(); iterator.hasNext();) {
+				S3ObjectSummary summary = (S3ObjectSummary) iterator.next();
+				s3.deleteObject(bucketName, summary.getKey());
+			}
+			if (object_listing.isTruncated()) {
+				object_listing = s3.listNextBatchOfObjects(object_listing);
+			} else {
+				break;
+			}
+		}
+	}
+
+	@Override
+	public void emptyBucket(final String bucketName) {
+		AmazonS3 s3 = null;
+		try {
+			s3 = AwsClientFactory.createClient();
+			removeObjects(s3,bucketName);
+			removeVersions(s3,bucketName);
+		} catch (AmazonServiceException e) {
+			System.err.println(e.getErrorMessage());
+			System.exit(1);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
 		
 }

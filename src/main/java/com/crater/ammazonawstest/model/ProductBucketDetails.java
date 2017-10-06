@@ -25,18 +25,18 @@ public class ProductBucketDetails {
 
 	
 	
-	@JsonProperty("product_bucket_name")
+	@JsonProperty("bucket_name")
 	public String getProductBucketName() {
 		return productBucketName;
 	}
 
 
-	@JsonProperty("category_name")
+	@JsonProperty("key")
 	public String getCategoryName() {
 		return categoryName;
 	}
 
-	@JsonProperty("image")
+	@JsonProperty("file")
 	public String getImage() {
 		return image;
 	}

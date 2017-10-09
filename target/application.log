@@ -12065,3 +12065,245 @@ DEBUG  [19:03:15.344] [java-sdk-http-connection-reaper] c.a.i.SdkSSLSocket -  sh
 DEBUG  [19:03:15.344] [java-sdk-http-connection-reaper] c.a.i.SdkSSLSocket -  closing wedoshoesproduct26b00d3f-dc63-4dc1-bdca-6bb73e3c9d59.s3.ap-south-1.amazonaws.com/52.92.249.2:443 
 DEBUG  [19:04:15.346] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
 DEBUG  [19:05:15.346] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:06:15.347] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:07:15.347] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:08:15.347] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:09:15.347] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:10:15.347] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:11:15.348] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:12:15.348] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:13:15.348] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:14:15.348] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:15:15.348] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:16:15.348] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:17:15.348] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:18:15.349] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:19:15.349] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:20:15.349] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:21:15.350] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:22:15.350] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:23:15.350] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:24:15.351] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:25:15.351] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:26:15.351] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:27:15.351] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:28:15.351] [java-sdk-http-connection-reaper] o.a.h.i.c.PoolingHttpClientConnectionManager -  Closing connections idle longer than 60000 MILLISECONDS 
+DEBUG  [19:28:20.376] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping org.eclipse.jetty.server.Server@11f9535b 
+DEBUG  [19:28:20.376] [Thread-12] o.e.j.s.Server -  doStop org.eclipse.jetty.server.Server@11f9535b 
+DEBUG  [19:28:20.434] [Thread-12] o.e.j.s.Server -  Graceful shutdown org.eclipse.jetty.server.Server@11f9535b by  
+DEBUG  [19:28:20.434] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping application@6ba060f3{HTTP/1.1,[http/1.1]}{0.0.0.0:8074} 
+DEBUG  [19:28:20.435] [dw-19] o.e.j.u.t.QueuedThreadPool -  ran dw-19-acceptor-0@1ec88aa1-application@6ba060f3{HTTP/1.1,[http/1.1]}{0.0.0.0:8074} 
+DEBUG  [19:28:20.435] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@542f6803 
+DEBUG  [19:28:20.435] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping org.eclipse.jetty.io.ManagedSelector@2d70f312 id=1 keys=0 selected=0 
+DEBUG  [19:28:20.435] [Thread-12] o.e.j.i.ManagedSelector -  Stopping org.eclipse.jetty.io.ManagedSelector@2d70f312 id=1 keys=0 selected=0 
+DEBUG  [19:28:20.436] [Thread-12] o.e.j.i.ManagedSelector -  Queued change org.eclipse.jetty.io.ManagedSelector$CloseEndPoints@5e7fdfe on org.eclipse.jetty.io.ManagedSelector@2d70f312 id=1 keys=0 selected=0 
+DEBUG  [19:28:20.436] [dw-22] o.e.j.i.ManagedSelector -  Selector loop woken up from select, 0/0 selected 
+DEBUG  [19:28:20.436] [dw-22] o.e.j.i.ManagedSelector -  Running change org.eclipse.jetty.io.ManagedSelector$CloseEndPoints@5e7fdfe 
+DEBUG  [19:28:20.436] [dw-22] o.e.j.i.ManagedSelector -  Closing 0 endPoints on org.eclipse.jetty.io.ManagedSelector@2d70f312 id=1 keys=0 selected=0 
+DEBUG  [19:28:20.436] [dw-22] o.e.j.i.ManagedSelector -  Closed 0 endPoints on org.eclipse.jetty.io.ManagedSelector@2d70f312 id=1 keys=0 selected=0 
+DEBUG  [19:28:20.436] [dw-22] o.e.j.i.ManagedSelector -  Selector loop waiting on select 
+DEBUG  [19:28:20.437] [Thread-12] o.e.j.i.ManagedSelector -  Queued change org.eclipse.jetty.io.ManagedSelector$CloseSelector@1ee37394 on org.eclipse.jetty.io.ManagedSelector@2d70f312 id=1 keys=0 selected=0 
+DEBUG  [19:28:20.437] [dw-22] o.e.j.i.ManagedSelector -  Selector loop woken up from select, 0/0 selected 
+DEBUG  [19:28:20.437] [dw-22] o.e.j.i.ManagedSelector -  Running change org.eclipse.jetty.io.ManagedSelector$CloseSelector@1ee37394 
+DEBUG  [19:28:20.437] [dw-22] o.e.j.u.t.s.ExecuteProduceConsume -  EPC Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@31897ce7 produced null 
+DEBUG  [19:28:20.437] [dw-22] o.e.j.u.t.s.ExecuteProduceConsume -  EPC Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@31897ce7 produce exit 
+DEBUG  [19:28:20.437] [dw-22] o.e.j.u.t.QueuedThreadPool -  ran EPC Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@31897ce7 
+DEBUG  [19:28:20.437] [Thread-12] o.e.j.i.ManagedSelector -  Stopped org.eclipse.jetty.io.ManagedSelector@2d70f312 id=1 keys=-1 selected=-1 
+DEBUG  [19:28:20.437] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED org.eclipse.jetty.io.ManagedSelector@2d70f312 id=1 keys=-1 selected=-1 
+DEBUG  [19:28:20.438] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping org.eclipse.jetty.io.ManagedSelector@3111631d id=0 keys=0 selected=0 
+DEBUG  [19:28:20.438] [Thread-12] o.e.j.i.ManagedSelector -  Stopping org.eclipse.jetty.io.ManagedSelector@3111631d id=0 keys=0 selected=0 
+DEBUG  [19:28:20.438] [Thread-12] o.e.j.i.ManagedSelector -  Queued change org.eclipse.jetty.io.ManagedSelector$CloseEndPoints@272d9d5b on org.eclipse.jetty.io.ManagedSelector@3111631d id=0 keys=0 selected=0 
+DEBUG  [19:28:20.438] [dw-20] o.e.j.i.ManagedSelector -  Selector loop woken up from select, 0/0 selected 
+DEBUG  [19:28:20.438] [dw-20] o.e.j.i.ManagedSelector -  Running change org.eclipse.jetty.io.ManagedSelector$CloseEndPoints@272d9d5b 
+DEBUG  [19:28:20.438] [dw-20] o.e.j.i.ManagedSelector -  Closing 0 endPoints on org.eclipse.jetty.io.ManagedSelector@3111631d id=0 keys=0 selected=0 
+DEBUG  [19:28:20.438] [dw-20] o.e.j.i.ManagedSelector -  Closed 0 endPoints on org.eclipse.jetty.io.ManagedSelector@3111631d id=0 keys=0 selected=0 
+DEBUG  [19:28:20.438] [dw-20] o.e.j.i.ManagedSelector -  Selector loop waiting on select 
+DEBUG  [19:28:20.438] [Thread-12] o.e.j.i.ManagedSelector -  Queued change org.eclipse.jetty.io.ManagedSelector$CloseSelector@569ce5a0 on org.eclipse.jetty.io.ManagedSelector@3111631d id=0 keys=0 selected=0 
+DEBUG  [19:28:20.438] [dw-20] o.e.j.i.ManagedSelector -  Selector loop woken up from select, 0/0 selected 
+DEBUG  [19:28:20.438] [dw-20] o.e.j.i.ManagedSelector -  Running change org.eclipse.jetty.io.ManagedSelector$CloseSelector@569ce5a0 
+DEBUG  [19:28:20.438] [dw-20] o.e.j.u.t.s.ExecuteProduceConsume -  EPC Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@4b047612 produced null 
+DEBUG  [19:28:20.438] [Thread-12] o.e.j.i.ManagedSelector -  Stopped org.eclipse.jetty.io.ManagedSelector@3111631d id=0 keys=-1 selected=-1 
+DEBUG  [19:28:20.438] [dw-20] o.e.j.u.t.s.ExecuteProduceConsume -  EPC Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@4b047612 produce exit 
+DEBUG  [19:28:20.438] [dw-20] o.e.j.u.t.QueuedThreadPool -  ran EPC Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@4b047612 
+DEBUG  [19:28:20.438] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED org.eclipse.jetty.io.ManagedSelector@3111631d id=0 keys=-1 selected=-1 
+DEBUG  [19:28:20.439] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@542f6803 
+DEBUG  [19:28:20.439] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping io.dropwizard.jetty.Jetty93InstrumentedConnectionFactory@167381c7 
+DEBUG  [19:28:20.439] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping HttpConnectionFactory@5562c2c9[HTTP/1.1] 
+DEBUG  [19:28:20.439] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED HttpConnectionFactory@5562c2c9[HTTP/1.1] 
+DEBUG  [19:28:20.439] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED io.dropwizard.jetty.Jetty93InstrumentedConnectionFactory@167381c7 
+DEBUG  [19:28:20.442] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@340d6d89 
+DEBUG  [19:28:20.443] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@340d6d89 
+INFO   [19:28:20.443] [Thread-12] o.e.j.s.AbstractConnector -  Stopped application@6ba060f3{HTTP/1.1,[http/1.1]}{0.0.0.0:8074} 
+DEBUG  [19:28:20.443] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED application@6ba060f3{HTTP/1.1,[http/1.1]}{0.0.0.0:8074} 
+DEBUG  [19:28:20.443] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping admin@47311277{HTTP/1.1,[http/1.1]}{0.0.0.0:8076} 
+DEBUG  [19:28:20.443] [dw-admin-30] o.e.j.u.t.QueuedThreadPool -  ran dw-admin-30-acceptor-0@6ed18d80-admin@47311277{HTTP/1.1,[http/1.1]}{0.0.0.0:8076} 
+DEBUG  [19:28:20.443] [dw-admin-31] o.e.j.u.t.QueuedThreadPool -  ran dw-admin-31-acceptor-1@4c24f3a2-admin@47311277{HTTP/1.1,[http/1.1]}{0.0.0.0:8076} 
+DEBUG  [19:28:20.443] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@1e60b459 
+DEBUG  [19:28:20.444] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping org.eclipse.jetty.io.ManagedSelector@6af78a48 id=3 keys=0 selected=0 
+DEBUG  [19:28:20.444] [Thread-12] o.e.j.i.ManagedSelector -  Stopping org.eclipse.jetty.io.ManagedSelector@6af78a48 id=3 keys=0 selected=0 
+DEBUG  [19:28:20.444] [Thread-12] o.e.j.i.ManagedSelector -  Queued change org.eclipse.jetty.io.ManagedSelector$CloseEndPoints@79f52384 on org.eclipse.jetty.io.ManagedSelector@6af78a48 id=3 keys=0 selected=0 
+DEBUG  [19:28:20.444] [dw-admin-29] o.e.j.i.ManagedSelector -  Selector loop woken up from select, 0/0 selected 
+DEBUG  [19:28:20.444] [dw-admin-29] o.e.j.i.ManagedSelector -  Running change org.eclipse.jetty.io.ManagedSelector$CloseEndPoints@79f52384 
+DEBUG  [19:28:20.444] [dw-admin-29] o.e.j.i.ManagedSelector -  Closing 0 endPoints on org.eclipse.jetty.io.ManagedSelector@6af78a48 id=3 keys=0 selected=0 
+DEBUG  [19:28:20.444] [dw-admin-29] o.e.j.i.ManagedSelector -  Closed 0 endPoints on org.eclipse.jetty.io.ManagedSelector@6af78a48 id=3 keys=0 selected=0 
+DEBUG  [19:28:20.444] [dw-admin-29] o.e.j.i.ManagedSelector -  Selector loop waiting on select 
+DEBUG  [19:28:20.444] [Thread-12] o.e.j.i.ManagedSelector -  Queued change org.eclipse.jetty.io.ManagedSelector$CloseSelector@7c0f80fd on org.eclipse.jetty.io.ManagedSelector@6af78a48 id=3 keys=0 selected=0 
+DEBUG  [19:28:20.444] [dw-admin-29] o.e.j.i.ManagedSelector -  Selector loop woken up from select, 0/0 selected 
+DEBUG  [19:28:20.444] [dw-admin-29] o.e.j.i.ManagedSelector -  Running change org.eclipse.jetty.io.ManagedSelector$CloseSelector@7c0f80fd 
+DEBUG  [19:28:20.444] [dw-admin-29] o.e.j.u.t.s.ExecuteProduceConsume -  EPC Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@f80648c produced null 
+DEBUG  [19:28:20.444] [dw-admin-29] o.e.j.u.t.s.ExecuteProduceConsume -  EPC Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@f80648c produce exit 
+DEBUG  [19:28:20.444] [Thread-12] o.e.j.i.ManagedSelector -  Stopped org.eclipse.jetty.io.ManagedSelector@6af78a48 id=3 keys=-1 selected=-1 
+DEBUG  [19:28:20.444] [dw-admin-29] o.e.j.u.t.QueuedThreadPool -  ran org.eclipse.jetty.io.ManagedSelector@6af78a48 id=3 keys=-1 selected=-1 
+DEBUG  [19:28:20.444] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED org.eclipse.jetty.io.ManagedSelector@6af78a48 id=3 keys=-1 selected=-1 
+DEBUG  [19:28:20.444] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping org.eclipse.jetty.io.ManagedSelector@3030836d id=2 keys=0 selected=0 
+DEBUG  [19:28:20.444] [Thread-12] o.e.j.i.ManagedSelector -  Stopping org.eclipse.jetty.io.ManagedSelector@3030836d id=2 keys=0 selected=0 
+DEBUG  [19:28:20.444] [Thread-12] o.e.j.i.ManagedSelector -  Queued change org.eclipse.jetty.io.ManagedSelector$CloseEndPoints@37831d62 on org.eclipse.jetty.io.ManagedSelector@3030836d id=2 keys=0 selected=0 
+DEBUG  [19:28:20.444] [dw-admin-28] o.e.j.i.ManagedSelector -  Selector loop woken up from select, 0/0 selected 
+DEBUG  [19:28:20.444] [dw-admin-28] o.e.j.i.ManagedSelector -  Running change org.eclipse.jetty.io.ManagedSelector$CloseEndPoints@37831d62 
+DEBUG  [19:28:20.444] [dw-admin-28] o.e.j.i.ManagedSelector -  Closing 0 endPoints on org.eclipse.jetty.io.ManagedSelector@3030836d id=2 keys=0 selected=0 
+DEBUG  [19:28:20.445] [dw-admin-28] o.e.j.i.ManagedSelector -  Closed 0 endPoints on org.eclipse.jetty.io.ManagedSelector@3030836d id=2 keys=0 selected=0 
+DEBUG  [19:28:20.445] [dw-admin-28] o.e.j.i.ManagedSelector -  Selector loop waiting on select 
+DEBUG  [19:28:20.445] [Thread-12] o.e.j.i.ManagedSelector -  Queued change org.eclipse.jetty.io.ManagedSelector$CloseSelector@6035fd7 on org.eclipse.jetty.io.ManagedSelector@3030836d id=2 keys=0 selected=0 
+DEBUG  [19:28:20.445] [dw-admin-28] o.e.j.i.ManagedSelector -  Selector loop woken up from select, 0/0 selected 
+DEBUG  [19:28:20.445] [dw-admin-28] o.e.j.i.ManagedSelector -  Running change org.eclipse.jetty.io.ManagedSelector$CloseSelector@6035fd7 
+DEBUG  [19:28:20.445] [dw-admin-28] o.e.j.u.t.s.ExecuteProduceConsume -  EPC Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@14f9b775 produced null 
+DEBUG  [19:28:20.445] [dw-admin-28] o.e.j.u.t.s.ExecuteProduceConsume -  EPC Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@14f9b775 produce exit 
+DEBUG  [19:28:20.445] [Thread-12] o.e.j.i.ManagedSelector -  Stopped org.eclipse.jetty.io.ManagedSelector@3030836d id=2 keys=-1 selected=-1 
+DEBUG  [19:28:20.445] [dw-admin-28] o.e.j.u.t.QueuedThreadPool -  ran org.eclipse.jetty.io.ManagedSelector@3030836d id=2 keys=-1 selected=-1 
+DEBUG  [19:28:20.445] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED org.eclipse.jetty.io.ManagedSelector@3030836d id=2 keys=-1 selected=-1 
+DEBUG  [19:28:20.445] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping org.eclipse.jetty.io.ManagedSelector@28f154cc id=1 keys=0 selected=0 
+DEBUG  [19:28:20.445] [Thread-12] o.e.j.i.ManagedSelector -  Stopping org.eclipse.jetty.io.ManagedSelector@28f154cc id=1 keys=0 selected=0 
+DEBUG  [19:28:20.445] [Thread-12] o.e.j.i.ManagedSelector -  Queued change org.eclipse.jetty.io.ManagedSelector$CloseEndPoints@563aa590 on org.eclipse.jetty.io.ManagedSelector@28f154cc id=1 keys=0 selected=0 
+DEBUG  [19:28:20.445] [dw-admin-26] o.e.j.i.ManagedSelector -  Selector loop woken up from select, 0/0 selected 
+DEBUG  [19:28:20.445] [dw-admin-26] o.e.j.i.ManagedSelector -  Running change org.eclipse.jetty.io.ManagedSelector$CloseEndPoints@563aa590 
+DEBUG  [19:28:20.445] [dw-admin-26] o.e.j.i.ManagedSelector -  Closing 0 endPoints on org.eclipse.jetty.io.ManagedSelector@28f154cc id=1 keys=0 selected=0 
+DEBUG  [19:28:20.445] [dw-admin-26] o.e.j.i.ManagedSelector -  Closed 0 endPoints on org.eclipse.jetty.io.ManagedSelector@28f154cc id=1 keys=0 selected=0 
+DEBUG  [19:28:20.445] [dw-admin-26] o.e.j.i.ManagedSelector -  Selector loop waiting on select 
+DEBUG  [19:28:20.445] [Thread-12] o.e.j.i.ManagedSelector -  Queued change org.eclipse.jetty.io.ManagedSelector$CloseSelector@56b2cfc2 on org.eclipse.jetty.io.ManagedSelector@28f154cc id=1 keys=0 selected=0 
+DEBUG  [19:28:20.445] [dw-admin-26] o.e.j.i.ManagedSelector -  Selector loop woken up from select, 0/0 selected 
+DEBUG  [19:28:20.445] [dw-admin-26] o.e.j.i.ManagedSelector -  Running change org.eclipse.jetty.io.ManagedSelector$CloseSelector@56b2cfc2 
+DEBUG  [19:28:20.446] [dw-admin-26] o.e.j.u.t.s.ExecuteProduceConsume -  EPC Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@375f8f47 produced null 
+DEBUG  [19:28:20.446] [dw-admin-26] o.e.j.u.t.s.ExecuteProduceConsume -  EPC Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@375f8f47 produce exit 
+DEBUG  [19:28:20.446] [dw-admin-26] o.e.j.u.t.QueuedThreadPool -  ran org.eclipse.jetty.io.ManagedSelector@28f154cc id=1 keys=-1 selected=-1 
+DEBUG  [19:28:20.446] [Thread-12] o.e.j.i.ManagedSelector -  Stopped org.eclipse.jetty.io.ManagedSelector@28f154cc id=1 keys=-1 selected=-1 
+DEBUG  [19:28:20.446] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED org.eclipse.jetty.io.ManagedSelector@28f154cc id=1 keys=-1 selected=-1 
+DEBUG  [19:28:20.446] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping org.eclipse.jetty.io.ManagedSelector@3e6748ae id=0 keys=0 selected=0 
+DEBUG  [19:28:20.446] [Thread-12] o.e.j.i.ManagedSelector -  Stopping org.eclipse.jetty.io.ManagedSelector@3e6748ae id=0 keys=0 selected=0 
+DEBUG  [19:28:20.446] [Thread-12] o.e.j.i.ManagedSelector -  Queued change org.eclipse.jetty.io.ManagedSelector$CloseEndPoints@7975b07b on org.eclipse.jetty.io.ManagedSelector@3e6748ae id=0 keys=0 selected=0 
+DEBUG  [19:28:20.446] [dw-admin-25] o.e.j.i.ManagedSelector -  Selector loop woken up from select, 0/0 selected 
+DEBUG  [19:28:20.446] [dw-admin-25] o.e.j.i.ManagedSelector -  Running change org.eclipse.jetty.io.ManagedSelector$CloseEndPoints@7975b07b 
+DEBUG  [19:28:20.446] [dw-admin-25] o.e.j.i.ManagedSelector -  Closing 0 endPoints on org.eclipse.jetty.io.ManagedSelector@3e6748ae id=0 keys=0 selected=0 
+DEBUG  [19:28:20.446] [dw-admin-25] o.e.j.i.ManagedSelector -  Closed 0 endPoints on org.eclipse.jetty.io.ManagedSelector@3e6748ae id=0 keys=0 selected=0 
+DEBUG  [19:28:20.446] [dw-admin-25] o.e.j.i.ManagedSelector -  Selector loop waiting on select 
+DEBUG  [19:28:20.446] [Thread-12] o.e.j.i.ManagedSelector -  Queued change org.eclipse.jetty.io.ManagedSelector$CloseSelector@6514a565 on org.eclipse.jetty.io.ManagedSelector@3e6748ae id=0 keys=0 selected=0 
+DEBUG  [19:28:20.446] [dw-admin-25] o.e.j.i.ManagedSelector -  Selector loop woken up from select, 0/0 selected 
+DEBUG  [19:28:20.446] [dw-admin-25] o.e.j.i.ManagedSelector -  Running change org.eclipse.jetty.io.ManagedSelector$CloseSelector@6514a565 
+DEBUG  [19:28:20.447] [dw-admin-25] o.e.j.u.t.s.ExecuteProduceConsume -  EPC Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@1fb6d9f1 produced null 
+DEBUG  [19:28:20.447] [dw-admin-25] o.e.j.u.t.s.ExecuteProduceConsume -  EPC Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@1fb6d9f1 produce exit 
+DEBUG  [19:28:20.447] [dw-admin-25] o.e.j.u.t.QueuedThreadPool -  ran org.eclipse.jetty.io.ManagedSelector@3e6748ae id=0 keys=-1 selected=-1 
+DEBUG  [19:28:20.447] [Thread-12] o.e.j.i.ManagedSelector -  Stopped org.eclipse.jetty.io.ManagedSelector@3e6748ae id=0 keys=-1 selected=-1 
+DEBUG  [19:28:20.447] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED org.eclipse.jetty.io.ManagedSelector@3e6748ae id=0 keys=-1 selected=-1 
+DEBUG  [19:28:20.447] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@1e60b459 
+DEBUG  [19:28:20.447] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping io.dropwizard.jetty.Jetty93InstrumentedConnectionFactory@56f730b2 
+DEBUG  [19:28:20.447] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping HttpConnectionFactory@5807efad[HTTP/1.1] 
+DEBUG  [19:28:20.447] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED HttpConnectionFactory@5807efad[HTTP/1.1] 
+DEBUG  [19:28:20.447] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED io.dropwizard.jetty.Jetty93InstrumentedConnectionFactory@56f730b2 
+DEBUG  [19:28:20.447] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@316acbb5 
+DEBUG  [19:28:20.447] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@316acbb5 
+INFO   [19:28:20.447] [Thread-12] o.e.j.s.AbstractConnector -  Stopped admin@47311277{HTTP/1.1,[http/1.1]}{0.0.0.0:8076} 
+DEBUG  [19:28:20.447] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED admin@47311277{HTTP/1.1,[http/1.1]}{0.0.0.0:8076} 
+DEBUG  [19:28:20.447] [Thread-12] o.e.j.s.h.AbstractHandler -  stopping org.eclipse.jetty.server.Server@11f9535b 
+DEBUG  [19:28:20.447] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping org.eclipse.jetty.server.handler.StatisticsHandler@60c1663c 
+DEBUG  [19:28:20.447] [Thread-12] o.e.j.s.h.AbstractHandler -  stopping org.eclipse.jetty.server.handler.StatisticsHandler@60c1663c 
+DEBUG  [19:28:20.447] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping org.eclipse.jetty.server.handler.RequestLogHandler@3330f3ad 
+DEBUG  [19:28:20.447] [Thread-12] o.e.j.s.h.AbstractHandler -  stopping org.eclipse.jetty.server.handler.RequestLogHandler@3330f3ad 
+DEBUG  [19:28:20.447] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping io.dropwizard.jetty.BiDiGzipHandler@7d979d34 
+DEBUG  [19:28:20.447] [Thread-12] o.e.j.s.h.AbstractHandler -  stopping io.dropwizard.jetty.BiDiGzipHandler@7d979d34 
+DEBUG  [19:28:20.447] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping io.dropwizard.jetty.RoutingHandler@4bcaa195 
+DEBUG  [19:28:20.447] [Thread-12] o.e.j.s.h.AbstractHandler -  stopping io.dropwizard.jetty.RoutingHandler@4bcaa195 
+DEBUG  [19:28:20.448] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping i.d.j.MutableServletContextHandler@54aca26f{/,null,AVAILABLE} 
+DEBUG  [19:28:20.448] [Thread-12] o.e.j.s.h.AbstractHandler -  stopping i.d.j.MutableServletContextHandler@54aca26f{/,null,UNAVAILABLE} 
+DEBUG  [19:28:20.448] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping org.eclipse.jetty.servlet.ServletHandler@314ed053 
+DEBUG  [19:28:20.448] [Thread-12] o.e.j.s.h.AbstractHandler -  stopping org.eclipse.jetty.servlet.ServletHandler@314ed053 
+DEBUG  [19:28:20.448] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-71789580@2fa52a63==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false 
+DEBUG  [19:28:20.448] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-71789580@2fa52a63==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false 
+DEBUG  [19:28:20.448] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping io.dropwizard.jersey.filter.AllowedMethodsFilter-3f018494 
+DEBUG  [19:28:20.448] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED io.dropwizard.jersey.filter.AllowedMethodsFilter-3f018494 
+DEBUG  [19:28:20.448] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping com.codahale.metrics.servlets.AdminServlet-2935fd2c@f96616a0==com.codahale.metrics.servlets.AdminServlet,1,true 
+DEBUG  [19:28:20.448] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED com.codahale.metrics.servlets.AdminServlet-2935fd2c@f96616a0==com.codahale.metrics.servlets.AdminServlet,1,true 
+DEBUG  [19:28:20.448] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping tasks@6907b8e==io.dropwizard.servlets.tasks.TaskServlet,1,true 
+DEBUG  [19:28:20.448] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED tasks@6907b8e==io.dropwizard.servlets.tasks.TaskServlet,1,true 
+DEBUG  [19:28:20.450] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED org.eclipse.jetty.servlet.ServletHandler@314ed053 
+INFO   [19:28:20.451] [Thread-12] o.e.j.s.h.ContextHandler -  Stopped i.d.j.MutableServletContextHandler@54aca26f{/,null,UNAVAILABLE} 
+DEBUG  [19:28:20.451] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED i.d.j.MutableServletContextHandler@54aca26f{/,null,UNAVAILABLE} 
+DEBUG  [19:28:20.451] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping com.codahale.metrics.jetty9.InstrumentedHandler@355c94be 
+DEBUG  [19:28:20.451] [Thread-12] o.e.j.s.h.AbstractHandler -  stopping com.codahale.metrics.jetty9.InstrumentedHandler@355c94be 
+DEBUG  [19:28:20.451] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping i.d.j.MutableServletContextHandler@7bbbb6a8{/,null,AVAILABLE} 
+DEBUG  [19:28:20.451] [Thread-12] o.e.j.s.h.AbstractHandler -  stopping i.d.j.MutableServletContextHandler@7bbbb6a8{/,null,UNAVAILABLE} 
+DEBUG  [19:28:20.451] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping org.eclipse.jetty.servlet.ServletHandler@58a120b0 
+DEBUG  [19:28:20.451] [Thread-12] o.e.j.s.h.AbstractHandler -  stopping org.eclipse.jetty.servlet.ServletHandler@58a120b0 
+DEBUG  [19:28:20.451] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-6ef60295@d69b7a71==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false 
+DEBUG  [19:28:20.451] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-6ef60295@d69b7a71==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false 
+DEBUG  [19:28:20.451] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping io.dropwizard.jersey.setup.JerseyServletContainer-2e3572e8@d62d4f81==io.dropwizard.jersey.setup.JerseyServletContainer,1,true 
+DEBUG  [19:28:20.475] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED io.dropwizard.jersey.setup.JerseyServletContainer-2e3572e8@d62d4f81==io.dropwizard.jersey.setup.JerseyServletContainer,1,true 
+DEBUG  [19:28:20.475] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping io.dropwizard.servlets.ThreadNameFilter-7d70638 
+DEBUG  [19:28:20.475] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED io.dropwizard.servlets.ThreadNameFilter-7d70638 
+DEBUG  [19:28:20.475] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping io.dropwizard.jersey.filter.AllowedMethodsFilter-3119cf6f 
+DEBUG  [19:28:20.475] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED io.dropwizard.jersey.filter.AllowedMethodsFilter-3119cf6f 
+DEBUG  [19:28:20.475] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED org.eclipse.jetty.servlet.ServletHandler@58a120b0 
+INFO   [19:28:20.475] [Thread-12] o.e.j.s.h.ContextHandler -  Stopped i.d.j.MutableServletContextHandler@7bbbb6a8{/,null,UNAVAILABLE} 
+DEBUG  [19:28:20.475] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED i.d.j.MutableServletContextHandler@7bbbb6a8{/,null,UNAVAILABLE} 
+DEBUG  [19:28:20.475] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED com.codahale.metrics.jetty9.InstrumentedHandler@355c94be 
+DEBUG  [19:28:20.475] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED io.dropwizard.jetty.RoutingHandler@4bcaa195 
+DEBUG  [19:28:20.475] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED io.dropwizard.jetty.BiDiGzipHandler@7d979d34 
+DEBUG  [19:28:20.475] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED org.eclipse.jetty.server.handler.RequestLogHandler@3330f3ad 
+DEBUG  [19:28:20.475] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED org.eclipse.jetty.server.handler.StatisticsHandler@60c1663c 
+DEBUG  [19:28:20.475] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping dw-admin{STARTED,1<=7<=64,i=7,q=0} 
+DEBUG  [19:28:20.482] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED dw-admin{STOPPED,1<=7<=64,i=0,q=0} 
+DEBUG  [19:28:20.482] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping org.eclipse.jetty.server.handler.ErrorHandler@5740ff5e 
+DEBUG  [19:28:20.482] [Thread-12] o.e.j.s.h.AbstractHandler -  stopping org.eclipse.jetty.server.handler.ErrorHandler@5740ff5e 
+DEBUG  [19:28:20.482] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  STOPPED org.eclipse.jetty.server.handler.ErrorHandler@5740ff5e 
+DEBUG  [19:28:20.482] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  stopping com.crater.ammazonawstest.application.CoreApplication@1e236278 
+WARN   [19:28:20.516] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  FAILED com.crater.ammazonawstest.application.CoreApplication@1e236278: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.mchange.v2.c3p0.ComboPooledDataSource' available 
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.mchange.v2.c3p0.ComboPooledDataSource' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:348)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:335)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1093)
+	at com.crater.ammazonawstest.application.CoreApplication.stop(CoreApplication.java:61)
+	at io.dropwizard.lifecycle.JettyManaged.doStop(JettyManaged.java:32)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:143)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:161)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStop(AbstractHandler.java:73)
+	at org.eclipse.jetty.server.Server.doStop(Server.java:482)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.thread.ShutdownThread.run(ShutdownThread.java:138)
+DEBUG  [19:28:20.517] [Thread-12] o.e.j.u.t.ShutdownThread -  shutdown already commenced 
+WARN   [19:28:20.517] [Thread-12] o.e.j.u.c.AbstractLifeCycle -  FAILED org.eclipse.jetty.server.Server@11f9535b: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.mchange.v2.c3p0.ComboPooledDataSource' available 
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.mchange.v2.c3p0.ComboPooledDataSource' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:348)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:335)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1093)
+	at com.crater.ammazonawstest.application.CoreApplication.stop(CoreApplication.java:61)
+	at io.dropwizard.lifecycle.JettyManaged.doStop(JettyManaged.java:32)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:143)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:161)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStop(AbstractHandler.java:73)
+	at org.eclipse.jetty.server.Server.doStop(Server.java:482)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.thread.ShutdownThread.run(ShutdownThread.java:138)
+DEBUG  [19:28:20.517] [Thread-12] o.e.j.u.t.ShutdownThread -   
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.mchange.v2.c3p0.ComboPooledDataSource' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:348)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:335)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1093)
+	at com.crater.ammazonawstest.application.CoreApplication.stop(CoreApplication.java:61)
+	at io.dropwizard.lifecycle.JettyManaged.doStop(JettyManaged.java:32)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:143)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:161)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStop(AbstractHandler.java:73)
+	at org.eclipse.jetty.server.Server.doStop(Server.java:482)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.thread.ShutdownThread.run(ShutdownThread.java:138)

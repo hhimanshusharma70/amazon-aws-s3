@@ -1,0 +1,43 @@
+##############################################################
+Before running you need to set up envirionment variable somewhere so 
+set environment variable:- 
+right click project -> run as ->run configurations->environment
+add 
+AWS_ACCESS_KEY_ID: value get from aws account
+add
+AWS_SECRET_ACCESS_KEY:
+add region information:-
+AWS_REGION:ap-south-1 (mine here you may choose)
+
+
+
+################################################################
+
+1> For simple operation:-
+
+Step 1 :- First run this program by right clicking CoreApplication and run as java application
+
+2> For executing operation like encryption and decryption of objects using assymmetric approach:-
+
+For uploading objects on s3 bucket with encryption -- first go to encryption->GenerateAsymmetricMasterKey click and run it 
+which will create private and public key in respective direcotry and it will be used during encrytion and 
+decryption and run the project as usual in step 1.
+
+
+
+###############################################################
+Updated postman collection to test :- 
+
+https://www.getpostman.com/collections/c0871aefca11e75a1b6f
+
+
+
+
+##########################################################
+For any help feel free to contact us:-
+hhimanshusharma70@gmamil.com
+
+
+
+
+

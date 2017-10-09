@@ -1,3 +1,0 @@
-ammazon-aws-s3-wedotest
-
-AWS_REGION us-east-1 or ap-south-1

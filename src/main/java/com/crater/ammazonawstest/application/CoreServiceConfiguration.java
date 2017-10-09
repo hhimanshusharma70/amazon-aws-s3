@@ -4,9 +4,10 @@ import io.dropwizard.Configuration;
 
 /**
  * 
- * @author Navrattan Yadav
+ * @author Himanshu Sharma
  *
  */
+
 public class CoreServiceConfiguration extends Configuration {
 	
 }
